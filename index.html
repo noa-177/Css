@@ -1,0 +1,142 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<script src="https://kit.fontawesome.com/9e71f1c7a5.js" crossorigin="anonymous"></script>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+                <img src="Images/NLogo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark"onclick="closemenu"></i>
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu" ></i>
+         </nav>
+        <div class="header-text">
+                <p>WEB DEVELOPER</p>
+                <h1>Hi, I'm <span>Noah</span><br> <span>Assefa</span> From Ethiopia</h1>
+        </div>
+    </div>
+</div> 
+<!-------About------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/aboutme.gif">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>shdfi              
+                        Hi, I'm Noah Assefa, a passionate web developer from Ethiopia. 
+                        I specialize in crafting modern, responsive websites that offer engaging user experiences. 
+                        With a background in Computer Science and a constant drive to learn, 
+                        I blend creativity with technical expertise to bring ideas to life through code.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web Development</span><br>No Experience currently</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>COMPUTER SCIENCE</span><br>Studying currently at AMERICAN COLLEGE OF THECHNOLOGY</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------services----------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>
+                    Responsive websites with modern aesthetics and intuitive navigation.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>
+                    Intuitive mobile interfaces designed for a seamless user experience.
+                </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------CONTACT---------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>  nasefa7777@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    <a href=""><i class="fa-brands fa-telegram"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                <input type="text" name="Name" placeholder=" Your Name" required;>
+                <input type="email" name="email" placeholder=" Your Email" required>
+                <textarea name="Message" rows="6" placeholder=" Your Message"></textarea>
+                <button type="submit" class="btn btn2" >Submit</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Noah. </p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+        sidemenu.style.right = "0";
+    }
+</script>
+</body>
+</html>
