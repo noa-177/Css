@@ -238,6 +238,7 @@ form input, form textarea{
 }
 .copyright{
     width: 100%;
+    color: #abababbc;
     text-align: center;
     padding: 25px 0;
     background: #262626;
